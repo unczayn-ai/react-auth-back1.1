@@ -112,7 +112,7 @@ app.post("/register", async (req, res) => {
     }
 
     await User.create(newUser);
-    console.log("Registered Users:", User);
+    console.log("Registered Users:", newUser);
 
     return res.status(201).json({
         message: "Registration successful",
@@ -132,5 +132,5 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
 
-    console.log(`Server is running on port${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
