@@ -37,8 +37,7 @@ function authenticateToken(req, res, next) {
 }
 
 app.use(cors({
-    origin: "https://login12.vercel.app/",
-    credentials: true
+    origin: process.env.FRONTEND_URL
 }));
 app.use(express.json());
 
